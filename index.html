@@ -473,7 +473,93 @@
     </div>
   </div>
 
-  <!-- ══ SLIDE 3 – Products ══ -->
+  <!-- ══ SLIDE 6 – Grade Explanation ══ -->
+  <div class="slide" style="background:#fafafa;">
+    <div class="full-w">
+      <div class="section-label" data-en="How to Read Results" data-ja="結果の見方">How to Read Results</div>
+      <h2 class="page-title">
+        <span data-en="Understanding Verifier " data-ja="検証機の">Understanding Verifier </span><span class="red" data-en="Grade Results" data-ja="グレード結果を理解する">Grade Results</span>
+      </h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;">
+
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:#fff;border:2px solid #e8e8e8;border-radius:10px;padding:14px 16px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+              <span style="background:#cc0000;color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;" data-en="Worst-Case Principle" data-ja="最低値原則">Worst-Case Principle</span>
+            </div>
+            <p style="font-size:13px;color:#444;line-height:1.6;" data-en="The final grade = the lowest score among all parameters. One failing parameter brings the entire symbol grade to F." data-ja="最終グレード＝全パラメータの最低スコア。1つのパラメータが不合格になると、シンボル全体のグレードがFになります。">The final grade = the lowest score among all parameters. One failing parameter brings the entire symbol grade to F.</p>
+          </div>
+
+          <div style="background:#fff;border:2px solid #e8e8e8;border-radius:10px;padding:14px 16px;">
+            <div style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:10px;" data-en="Key Parameters" data-ja="主要パラメータ">Key Parameters</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:10px;align-items:flex-start;">
+                <span style="color:#cc0000;font-weight:800;flex-shrink:0;font-size:13px;">→</span>
+                <div><span style="font-size:13px;font-weight:700;" data-en="Decode" data-ja="デコード">Decode</span> <span style="font-size:12px;color:#666;" data-en="— symbol successfully read? If not, grade = F immediately." data-ja="— シンボルを正常に読み取れたか？失敗するとグレードは即座にFになります。">— symbol successfully read? If not, grade = F immediately.</span></div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;">
+                <span style="color:#cc0000;font-weight:800;flex-shrink:0;font-size:13px;">→</span>
+                <div><span style="font-size:13px;font-weight:700;" data-en="Symbol Contrast" data-ja="シンボルコントラスト">Symbol Contrast</span> <span style="font-size:12px;color:#666;" data-en="— difference between darkest and lightest elements. Low contrast = bars and spaces hard to distinguish." data-ja="— 最も暗い要素と明るい要素の差。コントラストが低いとバーとスペースの区別が困難になります。">— difference between darkest and lightest elements. Low contrast = bars and spaces hard to distinguish.</span></div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;">
+                <span style="color:#cc0000;font-weight:800;flex-shrink:0;font-size:13px;">→</span>
+                <div><span style="font-size:13px;font-weight:700;" data-en="Modulation" data-ja="モジュレーション">Modulation</span> <span style="font-size:12px;color:#666;" data-en="— uniformity of the signal. Low score = inconsistent bars/spaces, often caused by noise or blurring." data-ja="— 信号の均一性。スコアが低い場合、ノイズやぼかしによりバー・スペースが不均一になっています。">— uniformity of the signal. Low score = inconsistent bars/spaces, often caused by noise or blurring.</span></div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;">
+                <span style="color:#cc0000;font-weight:800;flex-shrink:0;font-size:13px;">→</span>
+                <div><span style="font-size:13px;font-weight:700;" data-en="Reflectance Margin" data-ja="反射率マージン">Reflectance Margin</span> <span style="font-size:12px;color:#666;" data-en="— consistent reflectance across the entire symbol area." data-ja="— シンボル全体にわたる均一な反射率。">— consistent reflectance across the entire symbol area.</span></div>
+              </div>
+              <div style="display:flex;gap:10px;align-items:flex-start;">
+                <span style="color:#cc0000;font-weight:800;flex-shrink:0;font-size:13px;">→</span>
+                <div><span style="font-size:13px;font-weight:700;" data-en="Axial Non-uniformity" data-ja="軸方向の不均一性">Axial Non-uniformity</span> <span style="font-size:12px;color:#666;" data-en="— geometric distortion. Low score = symbol is skewed or stretched." data-ja="— 幾何学的歪み。スコアが低い場合、シンボルが傾いているか引き伸ばされています。">— geometric distortion. Low score = symbol is skewed or stretched.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:#fff;border:2px solid #e8e8e8;border-radius:10px;padding:14px 16px;">
+            <div style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:10px;" data-en="Grade Scale" data-ja="グレードスケール">Grade Scale</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:14px;font-weight:800;color:#1e7e34;min-width:20px;">A</span>
+                <div style="flex:1;height:8px;background:#1e7e34;border-radius:4px;"></div>
+                <span style="font-size:12px;color:#666;" data-en="4.0 — Excellent" data-ja="4.0 — 優良">4.0 — Excellent</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:14px;font-weight:800;color:#5aa832;min-width:20px;">B</span>
+                <div style="flex:1;height:8px;background:#5aa832;border-radius:4px;width:75%;"></div>
+                <span style="font-size:12px;color:#666;" data-en="3.0 — Good" data-ja="3.0 — 良好">3.0 — Good</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:14px;font-weight:800;color:#e0a800;min-width:20px;">C</span>
+                <div style="flex:1;height:8px;background:#e0a800;border-radius:4px;width:50%;"></div>
+                <span style="font-size:12px;color:#666;" data-en="2.0 — Adequate" data-ja="2.0 — 許容">2.0 — Adequate</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:14px;font-weight:800;color:#e07000;min-width:20px;">D</span>
+                <div style="flex:1;height:8px;background:#e07000;border-radius:4px;width:25%;"></div>
+                <span style="font-size:12px;color:#666;" data-en="1.0 — Marginal" data-ja="1.0 — 限界">1.0 — Marginal</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="font-size:14px;font-weight:800;color:#cc0000;min-width:20px;">F</span>
+                <div style="flex:1;height:8px;background:#cc0000;border-radius:4px;width:10%;"></div>
+                <span style="font-size:12px;color:#cc0000;font-weight:700;" data-en="0.0 — Fail" data-ja="0.0 — 不合格">0.0 — Fail ← Our result</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#fff8f0;border:2px solid #e07000;border-radius:10px;padding:14px 16px;">
+            <div style="font-size:12px;font-weight:700;color:#e07000;margin-bottom:8px;">⚠ <span data-en="Important Note for Smartphone Screens" data-ja="スマートフォン画面に関する重要な注意">Important Note for Smartphone Screens</span></div>
+            <p style="font-size:12px;color:#555;line-height:1.65;" data-en="These parameters are defined for printed media. Evaluating smartphone screens may result in low grades due to display noise (Moiré effect) and screen reflectance — even if the code is perfectly readable by real POS scanners." data-ja="これらのパラメータは印刷媒体向けに定義されています。スマートフォン画面の評価では、表示ノイズ（モアレ効果）や画面の反射率により低いグレードが出ることがあります — 実際のPOSスキャナーでは問題なく読み取れる場合でも同様です。">These parameters are defined for printed media. Evaluating smartphone screens may result in low grades due to display noise (Moiré effect) and screen reflectance — even if the code is perfectly readable by real POS scanners.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 7 – Products ══ -->
   <div class="slide slide-product">
     <div class="full-w">
       <div class="section-label" data-en="Products Presented" data-ja="紹介製品">Products Presented</div>
