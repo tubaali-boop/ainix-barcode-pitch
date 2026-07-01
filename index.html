@@ -519,34 +519,52 @@
 
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div style="background:#fff;border:2px solid #e8e8e8;border-radius:10px;padding:14px 16px;">
-            <div style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:10px;" data-en="Grade Scale" data-ja="グレードスケール">Grade Scale</div>
-            <div style="display:flex;flex-direction:column;gap:6px;">
-              <div style="display:flex;align-items:center;gap:10px;">
-                <span style="font-size:14px;font-weight:800;color:#1e7e34;min-width:20px;">A</span>
-                <div style="flex:1;height:8px;background:#1e7e34;border-radius:4px;"></div>
-                <span style="font-size:12px;color:#666;" data-en="4.0 — Excellent" data-ja="4.0 — 優良">4.0 — Excellent</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;">
-                <span style="font-size:14px;font-weight:800;color:#5aa832;min-width:20px;">B</span>
-                <div style="flex:1;height:8px;background:#5aa832;border-radius:4px;width:75%;"></div>
-                <span style="font-size:12px;color:#666;" data-en="3.0 — Good" data-ja="3.0 — 良好">3.0 — Good</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;">
-                <span style="font-size:14px;font-weight:800;color:#e0a800;min-width:20px;">C</span>
-                <div style="flex:1;height:8px;background:#e0a800;border-radius:4px;width:50%;"></div>
-                <span style="font-size:12px;color:#666;" data-en="2.0 — Adequate" data-ja="2.0 — 許容">2.0 — Adequate</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;">
-                <span style="font-size:14px;font-weight:800;color:#e07000;min-width:20px;">D</span>
-                <div style="flex:1;height:8px;background:#e07000;border-radius:4px;width:25%;"></div>
-                <span style="font-size:12px;color:#666;" data-en="1.0 — Marginal" data-ja="1.0 — 限界">1.0 — Marginal</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;">
-                <span style="font-size:14px;font-weight:800;color:#cc0000;min-width:20px;">F</span>
-                <div style="flex:1;height:8px;background:#cc0000;border-radius:4px;width:10%;"></div>
-                <span style="font-size:12px;color:#cc0000;font-weight:700;" data-en="0.0 — Fail" data-ja="0.0 — 不合格">0.0 — Fail ← Our result</span>
-              </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <div style="font-size:12px;font-weight:700;color:#1a1a1a;" data-en="Grade Scale" data-ja="グレードスケール">Grade Scale</div>
+              <div style="font-size:10px;font-weight:700;color:#cc0000;letter-spacing:1px;background:#fff0f0;padding:2px 8px;border-radius:10px;border:1px solid #cc0000;" data-en="RPay QR scores →" data-ja="楽天ペイQRスコア →">RPay QR scores →</div>
             </div>
+            <!-- header row -->
+            <div style="display:grid;grid-template-columns:16px 1fr 80px 90px;gap:8px;align-items:center;margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #eee;">
+              <span></span><span></span>
+              <span style="font-size:10px;color:#999;text-align:right;" data-en="Grade" data-ja="グレード">Grade</span>
+              <span style="font-size:10px;color:#cc0000;font-weight:700;text-align:right;" data-en="RPay QR" data-ja="RPay QR">RPay QR</span>
+            </div>
+            <!-- A -->
+            <div style="display:grid;grid-template-columns:16px 1fr 80px 90px;gap:8px;align-items:center;margin-bottom:5px;">
+              <span style="font-size:13px;font-weight:800;color:#1e7e34;">A</span>
+              <div style="height:7px;background:#1e7e34;border-radius:4px;"></div>
+              <span style="font-size:11px;color:#666;text-align:right;" data-en="4.0 Excellent" data-ja="4.0 優良">4.0 Excellent</span>
+              <span style="font-size:11px;font-weight:700;color:#1e7e34;text-align:right;">Decode 4.0 ✓</span>
+            </div>
+            <!-- B -->
+            <div style="display:grid;grid-template-columns:16px 1fr 80px 90px;gap:8px;align-items:center;margin-bottom:5px;">
+              <span style="font-size:13px;font-weight:800;color:#5aa832;">B</span>
+              <div style="height:7px;background:#5aa832;border-radius:4px;width:75%;"></div>
+              <span style="font-size:11px;color:#666;text-align:right;" data-en="3.0 Good" data-ja="3.0 良好">3.0 Good</span>
+              <span style="font-size:11px;font-weight:700;color:#5aa832;text-align:right;" data-en="Cell Contrast 4.0" data-ja="セルコントラスト 4.0">Cell Contrast 4.0</span>
+            </div>
+            <!-- C -->
+            <div style="display:grid;grid-template-columns:16px 1fr 80px 90px;gap:8px;align-items:center;margin-bottom:5px;">
+              <span style="font-size:13px;font-weight:800;color:#e0a800;">C</span>
+              <div style="height:7px;background:#e0a800;border-radius:4px;width:50%;"></div>
+              <span style="font-size:11px;color:#666;text-align:right;" data-en="2.0 Adequate" data-ja="2.0 許容">2.0 Adequate</span>
+              <span style="font-size:11px;font-weight:700;color:#e0a800;text-align:right;">UEC 2.5 · FPD 2.0</span>
+            </div>
+            <!-- D -->
+            <div style="display:grid;grid-template-columns:16px 1fr 80px 90px;gap:8px;align-items:center;margin-bottom:5px;">
+              <span style="font-size:13px;font-weight:800;color:#e07000;">D</span>
+              <div style="height:7px;background:#e07000;border-radius:4px;width:25%;"></div>
+              <span style="font-size:11px;color:#666;text-align:right;" data-en="1.0 Marginal" data-ja="1.0 限界">1.0 Marginal</span>
+              <span style="font-size:11px;color:#aaa;text-align:right;">—</span>
+            </div>
+            <!-- F -->
+            <div style="display:grid;grid-template-columns:16px 1fr 80px 90px;gap:8px;align-items:center;background:#fff0f0;border-radius:6px;padding:4px 2px;">
+              <span style="font-size:13px;font-weight:800;color:#cc0000;">F</span>
+              <div style="height:7px;background:#cc0000;border-radius:4px;width:10%;"></div>
+              <span style="font-size:11px;color:#cc0000;font-weight:700;text-align:right;" data-en="0.0 Fail" data-ja="0.0 不合格">0.0 Fail</span>
+              <span style="font-size:11px;font-weight:800;color:#cc0000;text-align:right;">Modulation 0.0 ✗</span>
+            </div>
+            <div style="margin-top:8px;font-size:10px;color:#888;line-height:1.5;" data-en="Overall: 0.0 / F — driven by Modulation failure. AN &amp; GN both 4.0." data-ja="総合：0.0 / F — モジュレーション不合格が要因。AN・GNはともに4.0。">Overall: 0.0 / F — driven by Modulation failure. AN &amp; GN both 4.0.</div>
           </div>
 
           <div style="background:#fff8f0;border:2px solid #e07000;border-radius:10px;padding:14px 16px;">
