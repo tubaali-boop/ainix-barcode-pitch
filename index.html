@@ -68,19 +68,23 @@
 
   /* ── SLIDE 2 – Scanability ── */
   .slide-scan { background: #fff; }
-  .scan-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; width: 100%; }
-  .scan-layout .scan-info h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: #1a1a1a; }
-  .scan-layout .scan-info p  { font-size: 14px; color: #555; line-height: 1.7; margin-bottom: 18px; }
-  .code-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
-  .code-chip {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #fff5f5; border: 2px solid #cc0000;
-    border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 700; color: #cc0000;
+  .scan-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; margin-bottom: 20px; }
+  .scan-card {
+    background: #fafafa; border: 2px solid #e8e8e8; border-radius: 12px;
+    padding: 22px 20px;
   }
-  .scan-layout .scan-img img {
-    width: 100%; border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.14); border: 1px solid #e0e0e0;
+  .scan-card.accent { background: #fff5f5; border-color: #cc0000; }
+  .scan-card .sc-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #cc0000; margin-bottom: 8px; }
+  .scan-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .scan-card p { font-size: 13px; color: #555; line-height: 1.65; }
+  .standard-banner {
+    width: 100%; background: #fff8f0; border: 2px solid #e07000;
+    border-radius: 10px; padding: 14px 20px;
+    display: flex; align-items: center; gap: 14px;
   }
+  .standard-banner .icon { font-size: 22px; flex-shrink: 0; }
+  .standard-banner p { font-size: 13px; color: #333; line-height: 1.6; }
+  .standard-banner strong { color: #e07000; }
 
   /* ── SLIDE 5 – BV vs POS ── */
   .slide-bvpos { background: #fafafa; }
@@ -293,19 +297,26 @@
       <h2 class="page-title">
         <span data-en="What is " data-ja="">What is </span><span class="red" data-en="Scanability?" data-ja="スキャナビリティとは？">Scanability?</span>
       </h2>
-      <div class="scan-layout">
-        <div class="scan-info">
-          <h3 data-en="The ability of a scanner to reliably read a code" data-ja="スキャナーがコードを確実に読み取れる能力">The ability of a scanner to reliably read a code</h3>
-          <p data-en="Scanability measures whether a printed or screen-displayed barcode or QR code can be successfully read across different devices, lighting conditions, and scanning angles. Poor scanability leads to failed payments and frustrated users." data-ja="スキャナビリティとは、印刷または画面表示されたバーコード・QRコードが、異なるデバイス・照明条件・スキャン角度で正常に読み取れるかを測る指標です。スキャナビリティが低いと決済失敗やユーザー体験の悪化につながります。">Scanability measures whether a printed or screen-displayed barcode or QR code can be successfully read across different devices, lighting conditions, and scanning angles. Poor scanability leads to failed payments and frustrated users.</p>
-          <p data-en="For Rakuten Pay, two code types are used at checkout — both were tested and failed ISO/IEC grade thresholds." data-ja="楽天ペイでは会計時に2種類のコードが使用されており、どちらもISO/IECの合格基準を下回りました。">For Rakuten Pay, two code types are used at checkout — both were tested and failed ISO/IEC grade thresholds.</p>
-          <div class="code-chips">
-            <div class="code-chip">▌▌▌ <span data-en="CODE128 Barcode" data-ja="CODE128 バーコード">CODE128 Barcode</span></div>
-            <div class="code-chip">⬛ <span data-en="QR Code" data-ja="QRコード">QR Code</span></div>
-          </div>
+      <div class="scan-cards">
+        <div class="scan-card">
+          <div class="sc-label" data-en="Definition" data-ja="定義">Definition</div>
+          <h3 data-en="Can your code be read?" data-ja="コードは読み取れるか？">Can your code be read?</h3>
+          <p data-en="Whether a barcode or QR code displayed on a smartphone screen can be reliably scanned across different devices, lighting, and angles." data-ja="スマートフォン画面上のバーコード・QRコードが、異なるデバイス・照明・角度で確実に読み取れるかどうか。">Whether a barcode or QR code displayed on a smartphone screen can be reliably scanned across different devices, lighting, and angles.</p>
         </div>
-        <div class="scan-img">
-          <img src="images/code128_p2.png" alt="Rakuten Pay barcode and QR code on screen">
+        <div class="scan-card">
+          <div class="sc-label" data-en="Rakuten Pay" data-ja="楽天ペイ">Rakuten Pay</div>
+          <h3 data-en="Two code types in use" data-ja="2種類のコードを使用">Two code types in use</h3>
+          <p data-en="CODE128 barcode and QR code are both used at checkout. Both failed ISO/IEC grade thresholds in the June 24 test — Grade 0.0 / F." data-ja="CODE128バーコードとQRコードの両方を会計で使用。6月24日のテストで両方ともISO/IEC基準不合格 — グレード0.0 / F。">CODE128 barcode and QR code are both used at checkout. Both failed ISO/IEC grade thresholds in the June 24 test — Grade 0.0 / F.</p>
         </div>
+        <div class="scan-card accent">
+          <div class="sc-label" data-en="Gap" data-ja="課題">Gap</div>
+          <h3 data-en="No internal standards" data-ja="社内基準が未整備">No internal standards</h3>
+          <p data-en="We currently have no company standards for barcode or QR code display quality. This project will define and establish those standards." data-ja="現在、バーコード・QRコード表示品質に関する社内基準が存在しない。本プロジェクトでその基準を策定する。">We currently have no company standards for barcode or QR code display quality. This project will define and establish those standards.</p>
+        </div>
+      </div>
+      <div class="standard-banner">
+        <div class="icon">📋</div>
+        <p data-en="<strong>Outcome of this project:</strong> Establish Rakuten Pay barcode &amp; QR display standards — minimum contrast, quiet zone, resolution — to ensure consistent scanability across all supported POS devices." data-ja="<strong>本プロジェクトの成果：</strong> 楽天ペイのバーコード・QR表示基準を策定 — コントラスト最小値、クワイエットゾーン、解像度 — すべての対応POSデバイスで安定したスキャナビリティを確保する。"><strong>Outcome of this project:</strong> Establish Rakuten Pay barcode &amp; QR display standards — minimum contrast, quiet zone, resolution — to ensure consistent scanability across all supported POS devices.</p>
       </div>
     </div>
   </div>
@@ -322,14 +333,14 @@
         <div class="bvpos-card highlight">
           <div class="bv-header">
             <h3 data-en="Barcode Verifier (BV)" data-ja="バーコード検証機（BV）">Barcode Verifier (BV)</h3>
-            <span class="qty-badge red" data-en="Need: 1 unit" data-ja="必要台数：1台">Need: 1 unit</span>
+            <span class="qty-badge red" data-en="1 unit" data-ja="1台">1 unit</span>
           </div>
           <div class="bv-body">
             <img src="images/intro_p1.png" alt="REA VeriCube and CheckER hardware">
             <ul>
-              <li><span class="dot">→</span> <span data-en="Measures print/display quality against ISO/IEC standards" data-ja="ISO/IEC規格に基づき印刷・表示品質を測定">Measures print/display quality against ISO/IEC standards</span></li>
-              <li><span class="dot">→</span> <span data-en="1 device covers all 20 smartphones — one scan per phone per code type" data-ja="1台で全20台のスマートフォンをカバー — 1台ずつ各コードをスキャン">1 device covers all 20 smartphones — one scan per phone per code type</span></li>
-              <li><span class="dot">→</span> <span data-en="Gives objective grade (A–F) with detailed failure reasons" data-ja="不合格理由付きの客観的なグレード（A〜F）を提示">Gives objective grade (A–F) with detailed failure reasons</span></li>
+              <li><span class="dot">→</span> <span data-en="1 device tests all smartphones" data-ja="1台で全スマートフォンをテスト">1 device tests all smartphones</span></li>
+              <li><span class="dot">→</span> <span data-en="ISO/IEC grade (A–F) with failure details" data-ja="ISO/IECグレード（A〜F）と不合格詳細">ISO/IEC grade (A–F) with failure details</span></li>
+              <li><span class="dot">→</span> <span data-en="Identifies root cause of scan failures" data-ja="スキャン失敗の根本原因を特定">Identifies root cause of scan failures</span></li>
             </ul>
           </div>
         </div>
@@ -337,14 +348,31 @@
         <div class="bvpos-card">
           <div class="pos-header">
             <h3 data-en="POS Systems" data-ja="POSシステム">POS Systems</h3>
-            <span class="qty-badge grey" data-en="Need: 4–5+ units" data-ja="必要台数：4〜5台以上">Need: 4–5+ units</span>
+            <span class="qty-badge grey" data-en="4–5 units" data-ja="4〜5台">4–5 units</span>
           </div>
           <div class="bv-body">
-            <img src="images/intro_p9.png" alt="VeriCube POS scanning setup">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
+              <div style="background:#f0f0f0;border-radius:8px;padding:10px 12px;font-size:12px;">
+                <div style="font-weight:700;margin-bottom:2px">Zebra DS9308</div>
+                <div style="color:#666">Retail counter scanner, 1D/2D/QR</div>
+              </div>
+              <div style="background:#f0f0f0;border-radius:8px;padding:10px 12px;font-size:12px;">
+                <div style="font-weight:700;margin-bottom:2px">Toshiba TCx 800</div>
+                <div style="color:#666">Japan retail POS, integrated scanner</div>
+              </div>
+              <div style="background:#f0f0f0;border-radius:8px;padding:10px 12px;font-size:12px;">
+                <div style="font-weight:700;margin-bottom:2px">Casio V-R7000</div>
+                <div style="color:#666">Convenience store POS, QR support</div>
+              </div>
+              <div style="background:#f0f0f0;border-radius:8px;padding:10px 12px;font-size:12px;">
+                <div style="font-weight:700;margin-bottom:2px">NCR RealPOS 80XRT</div>
+                <div style="color:#666">High-speed retail checkout, 2D</div>
+              </div>
+            </div>
             <ul>
-              <li><span class="dot">→</span> <span data-en="Each POS scanner model behaves differently — all must be tested separately" data-ja="POSスキャナーの機種ごとに動作が異なるため、個別テストが必要">Each POS scanner model behaves differently — all must be tested separately</span></li>
-              <li><span class="dot">→</span> <span data-en="Real-world acceptance test: does this POS read our code under store conditions?" data-ja="実環境での受入テスト：店舗環境でPOSが自社コードを読めるか？">Real-world acceptance test: does this POS read our code under store conditions?</span></li>
-              <li><span class="dot">→</span> <span data-en="Each code type on each POS must be verified individually" data-ja="各POSで各コードタイプを個別に検証する必要がある">Each code type on each POS must be verified individually</span></li>
+              <li><span class="dot">→</span> <span data-en="Each model must be tested separately" data-ja="機種ごとに個別テストが必要">Each model must be tested separately</span></li>
+              <li><span class="dot">→</span> <span data-en="Pass/fail only — no quality diagnosis" data-ja="合否のみ — 品質診断なし">Pass/fail only — no quality diagnosis</span></li>
+              <li><span class="dot">→</span> <span data-en="Validates real store conditions" data-ja="実店舗環境での検証">Validates real store conditions</span></li>
             </ul>
           </div>
         </div>
@@ -352,42 +380,25 @@
       </div>
 
       <div class="ops-box">
-        <h4 data-en="📊 Estimated test operations — 20 smartphones × 2 code types (CODE128 + QR)" data-ja="📊 推定テスト工数 — スマートフォン20台 × 2コード種別（CODE128 + QR）">📊 Estimated test operations — 20 smartphones × 2 code types (CODE128 + QR)</h4>
+        <h4 data-en="📊 20 smartphones × 2 code types — operations estimate" data-ja="📊 スマートフォン20台 × 2コード種別 — 工数試算">📊 20 smartphones × 2 code types — operations estimate</h4>
         <table class="ops-table">
           <tr>
-            <th data-en="Method" data-ja="方法">Method</th>
-            <th data-en="Units needed" data-ja="必要台数">Units needed</th>
-            <th data-en="Scans per unit" data-ja="1台あたりのスキャン数">Scans per unit</th>
-            <th data-en="Total operations" data-ja="総工数">Total operations</th>
-            <th data-en="Notes" data-ja="備考">Notes</th>
+            <th data-en="Scenario" data-ja="シナリオ">Scenario</th>
+            <th data-en="Devices" data-ja="台数">Devices</th>
+            <th data-en="Total scans" data-ja="総スキャン数">Total scans</th>
+            <th data-en="Result" data-ja="結果">Result</th>
           </tr>
           <tr>
-            <td data-en="Barcode Verifier only" data-ja="バーコード検証機のみ">Barcode Verifier only</td>
+            <td data-en="1 Barcode Verifier" data-ja="バーコード検証機 1台">1 Barcode Verifier</td>
             <td class="ok-cell">1</td>
-            <td data-en="20 phones × 2 codes = 40" data-ja="20台 × 2種 = 40">20 phones × 2 codes = 40</td>
-            <td class="ok-cell" data-en="40 scans" data-ja="40スキャン">40 scans</td>
-            <td data-en="ISO-grade result per phone/code" data-ja="端末・コードごとにISO評価を取得">ISO-grade result per phone/code</td>
+            <td class="ok-cell">40</td>
+            <td data-en="ISO grade per phone &amp; code" data-ja="端末・コードごとにISOグレード取得">ISO grade per phone &amp; code</td>
           </tr>
           <tr>
-            <td data-en="1 POS system" data-ja="POSシステム1台">1 POS system</td>
-            <td>1</td>
-            <td data-en="20 phones × 2 codes = 40" data-ja="20台 × 2種 = 40">20 phones × 2 codes = 40</td>
-            <td data-en="40 scans" data-ja="40スキャン">40 scans</td>
-            <td data-en="Pass/fail only — no quality grade" data-ja="合否のみ — 品質グレードなし">Pass/fail only — no quality grade</td>
-          </tr>
-          <tr>
-            <td data-en="5 POS systems" data-ja="POSシステム5台">5 POS systems</td>
+            <td data-en="5 POS systems" data-ja="POSシステム 5台">5 POS systems</td>
             <td class="highlight-cell">5</td>
-            <td data-en="20 phones × 2 codes = 40 each" data-ja="20台 × 2種 = 各40">20 phones × 2 codes = 40 each</td>
-            <td class="highlight-cell" data-en="200 scans" data-ja="200スキャン">200 scans</td>
-            <td data-en="5× the effort, results vary per POS model" data-ja="工数5倍、機種ごとに結果が異なる">5× the effort, results vary per POS model</td>
-          </tr>
-          <tr>
-            <td data-en="BV + 5 POS (full coverage)" data-ja="BV + POS5台（完全網羅）">BV + 5 POS (full coverage)</td>
-            <td class="highlight-cell">6</td>
-            <td>—</td>
-            <td class="highlight-cell" data-en="240 scans total" data-ja="合計240スキャン">240 scans total</td>
-            <td data-en="Most thorough — quality diagnosis + real POS validation" data-ja="最も網羅的 — 品質診断＋実POS検証">Most thorough — quality diagnosis + real POS validation</td>
+            <td class="highlight-cell">200</td>
+            <td data-en="Pass/fail per POS model only" data-ja="機種ごとの合否のみ">Pass/fail per POS model only</td>
           </tr>
         </table>
       </div>
