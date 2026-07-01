@@ -314,14 +314,57 @@
           <p data-en="We currently have no company standards for barcode or QR code display quality. This project will define and establish those standards." data-ja="現在、バーコード・QRコード表示品質に関する社内基準が存在しない。本プロジェクトでその基準を策定する。">We currently have no company standards for barcode or QR code display quality. This project will define and establish those standards.</p>
         </div>
       </div>
-      <div class="standard-banner">
-        <div class="icon">📋</div>
-        <p data-en="<strong>Outcome of this project:</strong> Establish Rakuten Pay barcode &amp; QR display standards — minimum contrast, quiet zone, resolution — to ensure consistent scanability across all supported POS devices." data-ja="<strong>本プロジェクトの成果：</strong> 楽天ペイのバーコード・QR表示基準を策定 — コントラスト最小値、クワイエットゾーン、解像度 — すべての対応POSデバイスで安定したスキャナビリティを確保する。"><strong>Outcome of this project:</strong> Establish Rakuten Pay barcode &amp; QR display standards — minimum contrast, quiet zone, resolution — to ensure consistent scanability across all supported POS devices.</p>
+    </div>
+  </div>
+
+  <!-- ══ SLIDE 3 – CODE128 vs ISO ══ -->
+  <div class="slide slide-scan">
+    <div class="full-w">
+      <div class="section-label" data-en="Code Standards" data-ja="コード規格">Code Standards</div>
+      <h2 class="page-title">
+        <span data-en="CODE128 vs " data-ja="CODE128 vs ">CODE128 vs </span><span class="red" data-en="ISO Grading" data-ja="ISOグレード評価">ISO Grading</span>
+      </h2>
+      <div class="scan-cards">
+        <div class="scan-card">
+          <div class="sc-label" data-en="What it is" data-ja="定義">What it is</div>
+          <h3 data-en="CODE128 — the format" data-ja="CODE128 — コード形式">CODE128 — the format</h3>
+          <p data-en="A barcode symbology — defines how data is encoded as bars and spaces. It's one of many formats: EAN-13, QR, DataMatrix, etc. CODE128 describes what the code is." data-ja="バーコードのシンボル体系 — データをバーとスペースとしてエンコードする方法を定義します。EAN-13、QR、DataMatrixなどと並ぶ形式の一つ。CODE128は「コードが何であるか」を表します。">A barcode symbology — defines how data is encoded as bars and spaces. It's one of many formats: EAN-13, QR, DataMatrix, etc. CODE128 describes <em>what</em> the code is.</p>
+        </div>
+        <div class="scan-card">
+          <div class="sc-label" data-en="What it measures" data-ja="測定対象">What it measures</div>
+          <h3 data-en="ISO/IEC — the quality grade" data-ja="ISO/IEC — 品質グレード">ISO/IEC — the quality grade</h3>
+          <p data-en="A quality standard (ISO/IEC 15416 for 1D, 15415 for 2D) that grades how well any barcode is rendered — contrast, quiet zone, modulation, edge sharpness — on a scale of A to F. ISO grading describes how well the code is displayed." data-ja="1DバーコードにはISO/IEC 15416、2DにはISO/IEC 15415が適用されます。どの形式のバーコードに対しても、コントラスト・クワイエットゾーン・モジュレーション・エッジ鮮明度をA〜Fのスケールで評価します。ISOグレードは「どれだけうまく表示されているか」を示します。">A quality standard (ISO/IEC 15416 for 1D, 15415 for 2D) that grades how well <em>any</em> barcode is rendered — contrast, quiet zone, modulation, edge sharpness — on a scale of A to F. ISO grading describes <em>how well</em> the code is displayed.</p>
+        </div>
+        <div class="scan-card accent">
+          <div class="sc-label" data-en="The relationship" data-ja="両者の関係">The relationship</div>
+          <h3 data-en="Format ≠ Quality" data-ja="形式 ≠ 品質">Format ≠ Quality</h3>
+          <p data-en="A CODE128 barcode can score A (perfect) or F (failed) under ISO grading. In our test, the code was valid CODE128 — but the display quality was so poor it scored Grade 0.0 / F." data-ja="CODE128バーコードは、ISOグレードでA（優良）にもF（不合格）にもなります。今回のテストでは、コードはCODE128形式として有効でしたが、表示品質が非常に低くグレード0.0 / Fとなりました。">A CODE128 barcode can score A (perfect) or F (failed) under ISO grading. In our test, the code was valid CODE128 — but the display quality was so poor it scored <strong>Grade 0.0 / F</strong>.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-top:20px;background:#fafafa;border-radius:10px;padding:16px 24px;border:1px solid #e8e8e8;">
+        <div style="text-align:center;padding:0 24px;border-right:2px solid #e0e0e0;">
+          <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#999;margin-bottom:4px;" data-en="Code format" data-ja="コード形式">Code format</div>
+          <div style="font-size:22px;font-weight:800;color:#1a1a1a;">CODE128</div>
+          <div style="font-size:12px;color:#888;margin-top:2px;" data-en="What it is" data-ja="何であるか">What it is</div>
+        </div>
+        <div style="font-size:28px;color:#cc0000;font-weight:900;">+</div>
+        <div style="text-align:center;padding:0 24px;border-right:2px solid #e0e0e0;">
+          <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#999;margin-bottom:4px;" data-en="Quality standard" data-ja="品質規格">Quality standard</div>
+          <div style="font-size:22px;font-weight:800;color:#1a1a1a;">ISO/IEC 15416</div>
+          <div style="font-size:12px;color:#888;margin-top:2px;" data-en="How well it's displayed" data-ja="どれだけうまく表示されるか">How well it's displayed</div>
+        </div>
+        <div style="font-size:28px;color:#cc0000;font-weight:900;">=</div>
+        <div style="text-align:center;padding:0 24px;">
+          <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#cc0000;margin-bottom:4px;" data-en="Our test result" data-ja="今回のテスト結果">Our test result</div>
+          <div style="font-size:22px;font-weight:800;color:#cc0000;" data-en="Grade 0.0 / F" data-ja="グレード 0.0 / F">Grade 0.0 / F</div>
+          <div style="font-size:12px;color:#888;margin-top:2px;" data-en="Valid format, poor quality" data-ja="有効な形式、低品質">Valid format, poor quality</div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ══ SLIDE 3 – BV vs POS ══ -->
+  <!-- ══ SLIDE 4 – BV vs POS ══ -->
+
   <div class="slide slide-bvpos">
     <div class="full-w">
       <div class="section-label" data-en="Testing Scope" data-ja="テスト範囲">Testing Scope</div>
